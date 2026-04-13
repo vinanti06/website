@@ -1,0 +1,94 @@
+:root {
+    --primary-color: #00d2ff;
+    --bg-dark: #0f172a;
+    --text-light: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: rgba(15, 23, 42, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; }
+.logo span { color: var(--primary-color); }
+
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links a { color: white; text-decoration: none; margin: 0 20px; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary-color); }
+
+.login-trigger {
+    background: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hero Section with Picture Background */
+.hero-section {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text { position: relative; text-align: center; z-index: 1; }
+.hero-text h1 { font-size: 4rem; margin-bottom: 1rem; }
+
+/* Login Modal */
+.modal-wrapper {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #1e293b;
+    width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #334155;
+}
+
+.close-modal { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; }
+
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; margin-bottom: 5px; }
+.input-group input { width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; color: white; }
+
+.submit-btn { width: 100%; padding: 12px; background: var(--primary-color); border: none; cursor: pointer; font-weight: bold; }
+
+/* Footer */
+footer { padding: 50px 10% 20px; background: #020617; border-top: 1px solid #1e293b; }
